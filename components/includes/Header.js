@@ -44,8 +44,10 @@ class Header extends Component {
           <div className="container">
             <div className="row justify-content-end">
               <button style={{'margin-right':'5px'}} type="button" className="btn btn-dark">立即註冊&nbsp;<i className="fal fa-user-plus"/></button>
-              <input style={{'margin-right':'5px'}} type="text" className={css.input} placeholder="會員賬號"/>
-              <input style={{'margin-right':'5px'}} type="text" className={css.input} placeholder="登入密碼"/>
+              <form className={css.flex}>
+                <input style={{'margin-right':'5px'}} type="text" className={css.input} placeholder="會員賬號"/>
+                <input style={{'margin-right':'5px'}} type="text" className={css.input} placeholder="登入密碼"/>
+              </form>
               <button style={{'margin-right':'5px'}} type="button" className="btn btn-outline-dark">登入</button>
               <button type="button" className="btn btn-outline-dark">忘記密碼</button>
             </div>

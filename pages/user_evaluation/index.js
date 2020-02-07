@@ -7,10 +7,11 @@ class UserEvaluation extends Component {
     return (
       <Fragment>
         <DeskTopLayout>
-          <h1>UserEvaluation</h1>
-          <div className="about">
-            UserEvaluation
+          <div className="container">
+
+            <h1>UserEvaluation</h1>
           </div>
+
 
         </DeskTopLayout>
       </Fragment>

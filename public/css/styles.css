@@ -19,3 +19,40 @@ header .nav-link {
 
 .Marquee { overflow-x: hidden; }
 .MarqueeContent { display: inline-block; }
+
+.slick-prev {
+    position: absolute;
+    left: 0px;
+    height: 60px;
+    width: 40px;
+    transform: translateY(0%);
+    z-index: 100;
+}
+
+.slick-prev:before {
+    display: block;
+    color: #cccccc;
+    font-size: 40px;
+    content: '\f104';
+    font-family: fontawesome;
+    padding: 10px;
+    background-color: black;
+}
+.slick-next {
+    position: absolute;
+    right: 0px;
+    height: 60px;
+    width: 40px;
+    transform: translateY(0%);
+    z-index: 100;
+}
+
+.slick-next:before {
+    display: block;
+    color: #cccccc;
+    font-size: 40px;
+    content: '\f105';
+    font-family: fontawesome;
+    padding: 10px;
+    background-color: black;
+}

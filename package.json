@@ -21,6 +21,7 @@
     "react-marquee-order": "^0.2.2",
     "react-simple-dropdown": "^3.2.3",
     "react-sizes": "^2.0.0",
+    "react-slick": "^0.25.2",
     "react-smooth-marquee": "^1.0.0"
   }
 }

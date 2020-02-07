@@ -358,7 +358,14 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
         lineNumber: 46
       },
       __self: this
-    })), __jsx("input", {
+    })), __jsx("form", {
+      className: _styles_main_scss__WEBPACK_IMPORTED_MODULE_3___default.a.flex,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, __jsx("input", {
       style: {
         'margin-right': '5px'
       },
@@ -367,7 +374,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       placeholder: "\u6703\u54E1\u8CEC\u865F",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 48
       },
       __self: this
     }), __jsx("input", {
@@ -379,10 +386,10 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       placeholder: "\u767B\u5165\u5BC6\u78BC",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 49
       },
       __self: this
-    }), __jsx("button", {
+    })), __jsx("button", {
       style: {
         'margin-right': '5px'
       },
@@ -390,7 +397,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "btn btn-outline-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 49
+        lineNumber: 51
       },
       __self: this
     }, "\u767B\u5165"), __jsx("button", {
@@ -398,7 +405,7 @@ class Header extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       className: "btn btn-outline-dark",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 52
       },
       __self: this
     }, "\u5FD8\u8A18\u5BC6\u78BC")))));
@@ -644,97 +651,123 @@ const DeskTopLayout = props => __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragmen
   __self: undefined
 }), __jsx("link", {
   rel: "stylesheet",
-  href: "/css/styles.css",
+  href: "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css",
   __source: {
     fileName: _jsxFileName,
     lineNumber: 18
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "stylesheet",
+  type: "text/css",
+  charset: "UTF-8",
+  href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "stylesheet",
+  type: "text/css",
+  href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 20
+  },
+  __self: undefined
+}), __jsx("link", {
+  rel: "stylesheet",
+  href: "/css/styles.css",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 21
   },
   __self: undefined
 }), __jsx("script", {
   src: "js/light.min.js",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 22
   },
   __self: undefined
 }), __jsx("script", {
   src: "js/brands.min.js",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 23
   },
   __self: undefined
 }), __jsx("script", {
   src: "js/fontawesome.min.js",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 24
   },
   __self: undefined
 }), __jsx("title", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 25
   },
   __self: undefined
 }, "\u5361\u5229\u5A1B\u6A02\u57CE")), __jsx("div", {
   className: "superAwesome",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 24
+    lineNumber: 27
   },
   __self: undefined
 }, __jsx(_includes_Header__WEBPACK_IMPORTED_MODULE_2__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 25
+    lineNumber: 28
   },
   __self: undefined
 }), __jsx(_includes_NainNav__WEBPACK_IMPORTED_MODULE_3__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 26
+    lineNumber: 29
   },
   __self: undefined
 }), __jsx("div", {
   className: _styles_main_scss__WEBPACK_IMPORTED_MODULE_5___default.a.marquee,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 27
+    lineNumber: 30
   },
   __self: undefined
 }, __jsx("i", {
   className: "fal fa-volume-up",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 31
   },
   __self: undefined
 }), __jsx("div", {
   className: _styles_main_scss__WEBPACK_IMPORTED_MODULE_5___default.a.marquee_flexContainer,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 30
+    lineNumber: 33
   },
   __self: undefined
 }, __jsx(react_smooth_marquee__WEBPACK_IMPORTED_MODULE_1___default.a, {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 31
+    lineNumber: 34
   },
   __self: undefined
 }, __jsx("p", {
   className: _styles_main_scss__WEBPACK_IMPORTED_MODULE_5___default.a.marquee_text,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 32
+    lineNumber: 35
   },
   __self: undefined
-}, "\u6EAB\u99A8\u63D0\u793A\uFF1A\u5C0A\u656C\u7684\u3010\u5361\u5229\u5A1B\u6A02\u57CE\u3011\u6703\u54E1\u60A8\u597D\uFF01 2020-01-08\u865F\u5929\u5929\u8FD4\u6C34\u6700\u9AD81.8%\uFF0C\u5DF2\u7D93\u8FD4\u56DE\u5230\u60A8\u7684\u904A\u6232\u8CEC\u865F\u4E2D\uFF0C\u8ACB\u60A8\u767B\u5165\u67E5\u6536\uFF01\u8F49\u8CEC\u5230\u516C\u53F8\u6307\u5B9A\u9280\u884C\u5361\uFF0C\u63D0\u4EA4\u5165\u6B3E\u4FE1\u606F\u53EF\u5F97\u5230\u6B21\u6B21\u5B58\u6B21\u6B21\u90011.3%\u5165\u6B3E\u512A\u60E0\uFF0C\u8B1D\u8B1D\u3002")))), __jsx("div", {
-  className: "container",
+}, "\u6EAB\u99A8\u63D0\u793A\uFF1A\u5C0A\u656C\u7684\u3010\u5361\u5229\u5A1B\u6A02\u57CE\u3011\u6703\u54E1\u60A8\u597D\uFF01 2020-01-08\u865F\u5929\u5929\u8FD4\u6C34\u6700\u9AD81.8%\uFF0C\u5DF2\u7D93\u8FD4\u56DE\u5230\u60A8\u7684\u904A\u6232\u8CEC\u865F\u4E2D\uFF0C\u8ACB\u60A8\u767B\u5165\u67E5\u6536\uFF01\u8F49\u8CEC\u5230\u516C\u53F8\u6307\u5B9A\u9280\u884C\u5361\uFF0C\u63D0\u4EA4\u5165\u6B3E\u4FE1\u606F\u53EF\u5F97\u5230\u6B21\u6B21\u5B58\u6B21\u6B21\u90011.3%\u5165\u6B3E\u512A\u60E0\uFF0C\u8B1D\u8B1D\u3002")))), __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36
+    lineNumber: 39
   },
   __self: undefined
 }, props.children)));
@@ -2432,10 +2465,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/router */ "next/router");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_layouts_deskTopLayout__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layouts/deskTopLayout */ "./components/layouts/deskTopLayout.js");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../styles/main.scss */ "./styles/main.scss");
-/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-slick */ "react-slick");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/main.scss */ "./styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_6__);
 var _jsxFileName = "/Users/liukaiming/WebstormProjects/cali/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
 
 
 
@@ -2481,45 +2520,102 @@ class Index extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
   }
 
   render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      arrows: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
     return __jsx(react__WEBPACK_IMPORTED_MODULE_0__["Fragment"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 42
+        lineNumber: 51
       },
       __self: this
     }, __jsx(_components_layouts_deskTopLayout__WEBPACK_IMPORTED_MODULE_4__["default"], {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 43
+        lineNumber: 52
+      },
+      __self: this
+    }, __jsx(react_slick__WEBPACK_IMPORTED_MODULE_5___default.a, _extends({}, settings, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 53
+      },
+      __self: this
+    }), __jsx("img", {
+      src: "images/banner/banner01.jpg",
+      alt: "",
+      className: "img-responsive",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 54
+      },
+      __self: this
+    }), __jsx("img", {
+      src: "images/banner/banner02.jpg",
+      alt: "",
+      className: "img-responsive",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 55
+      },
+      __self: this
+    }), __jsx("img", {
+      src: "images/banner/banner03.jpg",
+      alt: "",
+      className: "img-responsive",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }), __jsx("img", {
+      src: "images/banner/banner04.jpg",
+      alt: "",
+      className: "img-responsive",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 57
+      },
+      __self: this
+    })), __jsx("div", {
+      className: "container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 61
       },
       __self: this
     }, __jsx("h1", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 62
       },
       __self: this
     }, "Hello Cali"), __jsx("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 63
       },
       __self: this
     }, this.props.isMobile ? null : __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("button", {
       onClick: () => next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push("/about"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 50
+        lineNumber: 67
       },
       __self: this
     }, "\u95DC\u65BC\u5361\u5229"), __jsx("button", {
       onClick: () => next_router__WEBPACK_IMPORTED_MODULE_3___default.a.push("/online_baccarat"),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 68
       },
       __self: this
-    }, "Go to online Baccarat")))));
+    }, "Go to online Baccarat"))))));
   }
 
 }
@@ -2545,6 +2641,7 @@ module.exports = {
 	"superAwesome": "_22FSOBq6oUnetNYRsYBo43",
 	"input": "_38iOWCD9ZxTDa7Kp4NNWdF",
 	"flexContainer": "TMwPXLjQpihvUU1uvLKVy",
+	"flex": "JK4h-C7w2miKSaDh_0xMg",
 	"menu": "_3jAwHf9XLIQvSo5JXTbhwG",
 	"marquee": "_2gDmNhYlFiGBcvjgVAGyM_",
 	"marquee_flexContainer": "xSxsrduvyvyxsod2tLKhn",
@@ -2705,6 +2802,17 @@ module.exports = require("react-is");
 /***/ (function(module, exports) {
 
 module.exports = require("react-sizes");
+
+/***/ }),
+
+/***/ "react-slick":
+/*!******************************!*\
+  !*** external "react-slick" ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-slick");
 
 /***/ }),
 
