@@ -1,0 +1,21 @@
+.about {
+    color: green;
+    font-size: 2rem;
+}
+.logo {
+    max-width: 310px;
+}
+
+header {
+    background-image: linear-gradient(270deg, #402F80 0%, #472265 33%, #1E1549 77%);
+
+}
+
+header .nav-link {
+    font-size: 18px;
+    color: #FFFFFF !important;
+    letter-spacing: 0;
+}
+
+.Marquee { overflow-x: hidden; }
+.MarqueeContent { display: inline-block; }

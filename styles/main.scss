@@ -1,0 +1,106 @@
+@import "breakpoint-sass";
+$mainText: #FFF3A7;
+$mainBK: #343434;
+$main: #332875;
+$main2: #75006c;
+$inputBG: #D7AE3E;
+.superAwesome {
+  @include breakpoint(max-width 768px) {
+    background-color: $main2;
+  }
+  background-color: $main;
+  color: white;
+  margin-bottom: unset;
+  padding: 5px;
+  background-image: linear-gradient(180deg, #FDF8A2 3%, #F4D97A 47%, #EEC462 100%);
+}
+
+.input {
+  &::placeholder {
+    color: white;
+    opacity: 1; /* Firefox */
+  }
+
+  &:focus {
+    color: #ffffff;
+    background-color: darken($inputBG, 15%);
+    //border-color: #ff7f19;
+    outline: 0;
+    outline-offset: -2px;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+  }
+
+  display: block;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000000;
+  background-color: $inputBG;
+  background-clip: padding-box;
+  border: unset;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.flexContainer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #D8D8D8;
+  width: 164px;
+  height: 238px;
+  position: absolute;
+  padding: 25px;
+  border-radius: 3px;
+  z-index: 100;
+
+  a {
+    &:hover {
+      color: #75006c;
+    }
+    &:link {
+      text-decoration: none;
+    }
+
+    color: $mainBK;
+  }
+}
+
+.marquee {
+  &_flexContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1100px;
+    overflow: hidden;
+    @include breakpoint(max-width 500px){
+      max-width: 500px;
+    }
+  }
+
+  max-height: 25px;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  &_text {
+    margin: 0;
+    font-size: 1rem;
+    white-space: nowrap;
+    color: $mainText;
+  }
+  svg {
+    margin-right: 10px;
+    text-align: right;
+    color: $mainText;
+  }
+}
