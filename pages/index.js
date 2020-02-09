@@ -4,7 +4,9 @@ import axios from 'axios';
 import Router from "next/router";
 import DeskTopLayout from '../components/layouts/deskTopLayout'
 import Slider from "react-slick";
+import SectionTitle from "../components/includes/SectionTitle";
 import css from "../styles/main.scss"
+import Tabs from "../components/Tabs";
 
 class Index extends Component {
   static async getInitialProps({pathname, query, asPath, req, res}) {
@@ -34,16 +36,30 @@ class Index extends Component {
     // console.log(props);
 
     this.state = {
-      users: props.userData
+      users: props.userData,
+      TabsActiveDefault: [true, false, false, false, false]
     }
+    
+    this.expandTab = this.expandTab.bind(this)
   }
-
+  
+  expandTab(index){
+    // console.log('open tab!!', index);
+    const reset = this.state.TabsActiveDefault.map(()=>false)
+    reset[index] = true
+    this.setState({
+      TabsActiveDefault:reset
+    });
+  }
+  
   render() {
     const settings = {
+      autoplay: true,
       dots: true,
       infinite: true,
-      arrows:true,
-      speed: 500,
+      arrows: true,
+      fade: true,
+      speed: 3000,
       slidesToShow: 1,
       slidesToScroll: 1
     };
@@ -51,24 +67,23 @@ class Index extends Component {
       <Fragment>
         <DeskTopLayout>
           <Slider {...settings}>
-            <img src="images/banner/banner01.jpg" alt="" className="img-responsive"/>
+            <img src="images/banner/banner01.jpeg" alt="" className="img-responsive"/>
             <img src="images/banner/banner02.jpg" alt="" className="img-responsive"/>
             <img src="images/banner/banner03.jpg" alt="" className="img-responsive"/>
             <img src="images/banner/banner04.jpg" alt="" className="img-responsive"/>
-
-
           </Slider>
           <div className="container">
-            <h1>Hello Cali</h1>
-            <div>
-              {
-                this.props.isMobile ? null:
-                  <>
-                    <button onClick={() => Router.push("/about")}>關於卡利</button>
-                    <button onClick={() => Router.push("/online_baccarat")}>Go to online Baccarat</button>
-                  </>
-              }
-            </div>
+            <SectionTitle subject='開始遊玩'/>
+
+            <ul>
+              <Tabs active={this.state.TabsActiveDefault[0]} open={this.expandTab} index={0}/>
+              <Tabs active={this.state.TabsActiveDefault[1]} open={this.expandTab} index={1}/>
+              <Tabs active={this.state.TabsActiveDefault[2]} open={this.expandTab} index={2}/>
+              <Tabs active={this.state.TabsActiveDefault[3]} open={this.expandTab} index={3}/>
+              <Tabs active={this.state.TabsActiveDefault[4]} open={this.expandTab} index={4}/>
+            </ul>
+
+
           </div>
         </DeskTopLayout>
       </Fragment>

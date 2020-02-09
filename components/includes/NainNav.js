@@ -35,7 +35,6 @@ const NainNav = () => (
                 <a className='nav-item nav-link'>優惠活動</a>
               </Link>
               <DropDownMenu/>
-
             </div>
 
           </div>

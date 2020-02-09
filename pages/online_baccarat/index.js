@@ -1,5 +1,7 @@
 import React, {Component, Fragment} from 'react'
 import DeskTopLayout from '../../components/layouts/deskTopLayout'
+import SectionTitle from "../../components/includes/SectionTitle";
+
 
 class Baccarat extends Component {
   render() {
@@ -7,9 +9,8 @@ class Baccarat extends Component {
     return (
       <Fragment>
         <DeskTopLayout>
-          <h1>online Baccarat</h1>
-          <div className="about">
-            Baccarat
+          <div className="container">
+            <SectionTitle subject='真人娛樂'/>
           </div>
 
         </DeskTopLayout>

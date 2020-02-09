@@ -1,0 +1,176 @@
+ul {
+  display: inline-flex;
+  margin: 0;
+  padding: 0 0 30px;
+  @include breakpoint($large) {
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .tabs {
+    @include breakpoint($large) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    display: flex;
+    flex-direction: row;
+    &:nth-child(1){
+      .iconTab{
+        &.active {
+          background-image: linear-gradient(180deg, #ff52f3 15%, #FFAB6C 66%, #FFDFC7 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+
+    }
+    &:nth-child(2){
+      .iconTab{
+        &.active {
+          background-image: linear-gradient(180deg, #2BFFEE 3%, #B0FFD3 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+    }
+    &:nth-child(3){
+      .iconTab{
+        &.active {
+          background-image: linear-gradient(180deg, #FF1E74 3%, #FB50FF 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+    }
+    &:nth-child(4){
+      .iconTab{
+        &.active {
+          background-image: linear-gradient(180deg, #FFB60C 3%, #FFF100 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+    }
+    &:nth-child(5){
+      .iconTab{
+        &.active {
+          background-image: linear-gradient(180deg, #00ADFF 3%, #5CF7FF 100%);
+          p {
+            color: black;
+          }
+        }
+      }
+    }
+    .iconTab {
+
+      @include breakpoint($large) {
+        max-width: 100%;
+        justify-content: center;
+        flex-direction: row;
+        background-image: linear-gradient(90deg, #EE6262 15%, #FFAB6C 66%, #FFDFC7 100%);
+        flex: 0 0 auto;
+      }
+      border: 1px solid #f2f42d;
+      max-width: 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      p {
+        @include breakpoint($large){
+          writing-mode: unset;
+          margin-bottom: 0;
+        }
+        font-size: 24px;
+        color: #FFF3A7;
+        writing-mode: vertical-lr;
+      }
+      span {
+        @include breakpoint($large){
+          font-size: 2rem;
+        }
+        color: #FFF3A7;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+        max-width: 64px;
+        font-size: 4rem;
+      }
+      cursor: pointer;
+      flex: 0 0 60px;
+      background-image: linear-gradient(0deg, #2F00D5 0%, #000000 100%);
+    }
+
+    .contentBox {
+      @include breakpoint($large) {
+        flex-direction: column;
+        max-width: 100%;
+      }
+      border: 1px solid #f2f42d;
+      flex: 1 1 auto;
+      background-color: black;
+      padding: 5px 0 5px 5px;
+      display: flex;
+      max-width: 800px;
+      justify-content: space-between;
+      align-items: center;
+
+      .contentIMG {
+        @include breakpoint($large){
+          flex: 1 1 100%;
+        }
+        flex: 1 1 68%;
+        max-height: 250px;
+        max-width: 500px;
+      }
+
+      .iconBox {
+        flex: 1 1 32%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background-color: black;
+
+        .iconBtn {
+          &:hover {
+            background-color: #FF52F3;
+            background-image: unset;
+          }
+
+          span {
+            &:hover {
+              color: white;
+              text-shadow: 1px 1px 3px black;
+              background: unset;
+              -webkit-background-clip: unset;
+              -webkit-text-fill-color: unset;
+            }
+            color: #a68322;
+            font-size: 6rem;
+            background: linear-gradient(180deg, #FDF8A2 3%, #F4D97A 47%, #EEC462 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          flex: 1 1 50%;
+          max-height: 100px;
+          max-width: 100px;
+          padding: 20px 5px;
+          margin: 3px;
+          border: 1px solid $darkGray;
+          border-radius: 8px;
+          background-image: linear-gradient(1deg, rgba(255, 82, 243, 0.98) 0%, rgba(13, 0, 61, 0.33) 19%, rgba(31, 5, 121, 0.19) 45%, rgba(28, 0, 50, 0.12) 94%);
+        }
+
+      }
+    }
+  }
+}
