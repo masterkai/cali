@@ -21,16 +21,13 @@ const DeskTopLayout = props => (
             href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"/>
       <link rel="stylesheet" href="/css/styles.css"/>
       <link rel="stylesheet" href="/css/iconfont.css"/>
-      <script src="js/light.min.js"/>
-      <script src="js/brands.min.js"/>
-      <script src="js/fontawesome.min.js"/>
       <title>卡利娛樂城</title>
     </Head>
     <div className="superAwesome">
       <Header/>
       <NainNav/>
       <div className={css.marquee}>
-        <i className="fal fa-volume-up"></i>
+        <span className='iconfont icon_volume-up-solid'/>
 
         <div className={css.marquee_flexContainer}>
           <Marquee>

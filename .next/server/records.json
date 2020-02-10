@@ -1,0 +1,79 @@
+{
+  "modules": {
+    "byIdentifier": {
+      "multi private-next-pages/about/index.js": 0,
+      "multi private-next-pages/access_process/index.js": 1,
+      "multi private-next-pages/app_download/index.js": 2,
+      "multi private-next-pages/electronics/index.js": 3,
+      "multi private-next-pages/fish/index.js": 4,
+      "multi private-next-pages/franchise/index.js": 5,
+      "multi private-next-pages/index.js": 6,
+      "multi private-next-pages/lottery/index.js": 7,
+      "multi private-next-pages/online_baccarat/index.js": 8,
+      "multi private-next-pages/promotions/index.js": 9,
+      "multi private-next-pages/sports/index.js": 10,
+      "multi private-next-pages/user_evaluation/index.js": 11,
+      "multi next/dist/pages/_app": 12,
+      "multi next/dist/pages/_error": 13,
+      "multi next/dist/pages/_document": 14
+    },
+    "usedIds": {
+      "0": 0,
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4,
+      "5": 5,
+      "6": 6,
+      "7": 7,
+      "8": 8,
+      "9": 9,
+      "10": 10,
+      "11": 11,
+      "12": 12,
+      "13": 13,
+      "14": 14
+    }
+  },
+  "chunks": {
+    "byName": {
+      "init-server.js": 0,
+      "on-error-server.js": 1,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/_app.js": 2,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/_document.js": 3,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/_error.js": 4,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/about.js": 5,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/access_process.js": 6,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/app_download.js": 7,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/electronics.js": 8,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/fish.js": 9,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/franchise.js": 10,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/index.js": 11,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/lottery.js": 12,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/online_baccarat.js": 13,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/promotions.js": 14,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/sports.js": 15,
+      "static/lgTO9hXMA0GwXm4KMK9Yx/pages/user_evaluation.js": 16
+    },
+    "bySource": {},
+    "usedIds": [
+      0,
+      1,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  }
+}

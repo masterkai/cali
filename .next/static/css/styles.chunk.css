@@ -202,7 +202,7 @@ ul {
           max-width: 100%;
           justify-content: center;
           flex-direction: row;
-          background-image: linear-gradient(90deg, #EE6262 15%, #FFAB6C 66%, #FFDFC7 100%);
+          background-image: linear-gradient(0deg, #2F00D5 0%, #000000 100%);
           flex: 0 0 auto; } }
       ul ._2dnDqpq5ewrAl27RYs8mID ._32xbGpZFzDmv4aV4dk-7wX p {
         font-size: 24px;
@@ -369,7 +369,7 @@ ul {
     font-size: 1rem;
     white-space: nowrap;
     color: #FFF3A7; }
-  ._2gDmNhYlFiGBcvjgVAGyM_ svg {
+  ._2gDmNhYlFiGBcvjgVAGyM_ span {
     margin-right: 10px;
     text-align: right;
     color: #FFF3A7; }
