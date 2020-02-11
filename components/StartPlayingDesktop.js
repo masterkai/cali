@@ -6,29 +6,76 @@ class StartPlayingDesktop extends React.Component {
     super(props);
 
     this.state = {
-      TabsActiveDefault: [true, false, false, false, false]
+      TabsActiveDefault: [true, false, false, false, false],
+      TabsData: [
+        {
+          "index": "0",
+          "icon": "baccarat",
+          "tabName": "真人娛樂",
+          "tabImage": "images/startPlay/truePeople_photo.jpg",
+          "gameProvider": ["allbet", "DreamGaming", "WM", "SAgaming"]
+        },
+        {
+          "index": "1",
+          "icon": "futbol-solid",
+          "tabName": "體育博彩",
+          "tabImage": "images/startPlay/sport_photo.jpg",
+          "gameProvider": ["SUPER", "AFBCash"]
+        },
+        {
+          "index": "2",
+          "icon": "ticket-alt-solid",
+          "tabName": "賓果彩票",
+          "tabImage": "images/startPlay/lottery_photo.jpg",
+          "gameProvider": ["Klottery", "SUPERbingo"]
+        },
+        {
+          "index": "3",
+          "icon": "alien-monster-solid",
+          "tabName": "電子遊戲",
+          "tabImage": "images/startPlay/poker_photo.jpg",
+          "gameProvider": ["RTGslots", "SAgaming", "betixion", "betsoft"]
+        },
+        {
+          "index": "4",
+          "icon": "fish",
+          "tabName": "捕魚王",
+          "tabImage": "images/startPlay/fish_photo.jpg",
+          "gameProvider": ["allbet", "SAgaming"]
+        }
+      ]
     }
 
     this.expandTab = this.expandTab.bind(this)
   }
 
-  expandTab(index){
+  expandTab(index) {
     // console.log('open tab!!', index);
-    const reset = this.state.TabsActiveDefault.map(()=>false)
+    const reset = this.state.TabsActiveDefault.map(() => false)
     reset[index] = true
     this.setState({
-      TabsActiveDefault:reset
+      TabsActiveDefault: reset
     });
   }
 
   render() {
+    const {TabsActiveDefault, TabsData} = this.state;
     return (
       <ul>
-        <Tabs active={this.state.TabsActiveDefault[0]} open={this.expandTab} index={0}/>
-        <Tabs active={this.state.TabsActiveDefault[1]} open={this.expandTab} index={1}/>
-        <Tabs active={this.state.TabsActiveDefault[2]} open={this.expandTab} index={2}/>
-        <Tabs active={this.state.TabsActiveDefault[3]} open={this.expandTab} index={3}/>
-        <Tabs active={this.state.TabsActiveDefault[4]} open={this.expandTab} index={4}/>
+        {
+          TabsData.map(Tab =>
+            <Tabs
+              key={parseInt(Tab.index)}
+              active={TabsActiveDefault[Tab.index]}
+              open={this.expandTab}
+              index={Tab.index}
+              icon={Tab.icon}
+              tabName={Tab.tabName}
+              tabImage={Tab.tabImage}
+              gameProvider={Tab.gameProvider}
+            />)
+        }
+
       </ul>
     )
   }

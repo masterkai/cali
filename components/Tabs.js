@@ -7,7 +7,7 @@ class Tabs extends Component {
 
     this.openTab = this.openTab.bind(this)
   }
-  
+
   openTab(index){
     this.props.open(index)
   }
@@ -15,29 +15,32 @@ class Tabs extends Component {
     const _class = {
       true: `${css.iconTab} ${css.active}`,
       false: `${css.iconTab}`
-    }
+    };
+    const {icon, tabName, gameProvider, tabImage} = this.props;
+
     return (
+
       <li className={css.tabs} onClick={()=>this.openTab(this.props.index)}>
         <div className={_class[this.props.active]}>
-          <span className="iconfont icon_baccarat"/>
-          <p>真人娛樂</p>
+          <span className={`iconfont icon_${icon}`}/>
+          <p>{tabName}</p>
         </div>
         {
           this.props.active ? <div className={css.contentBox}>
-            <img className={css.contentIMG} src='images/startPlay/truePeople_photo.jpg'/>
+            <img className={css.contentIMG} src={tabImage}/>
             <div className={css.iconBox}>
-              <div className={css.iconBtn}>
-                <span className="iconfont icon_allbet"/>
-              </div>
-              <div className={css.iconBtn}>
-                <span className="iconfont icon_DreamGaming"/>
-              </div>
-              <div className={css.iconBtn}>
-                <span className="iconfont icon_WM"/>
-              </div>
-              <div className={css.iconBtn}>
-                <span className="iconfont icon_SAgaming"/>
-              </div>
+              {
+                gameProvider.length > 2?gameProvider.map((p,index) =>(
+                  <div key={index} className={css.iconBtn} style={{'maxWidth':'100px'}}>
+                    <span  className={`iconfont icon_${p}`}/>
+                  </div>
+                )):gameProvider.map((p,index) =>(
+                  <div key={index} className={css.iconBtn} style={{'maxWidth':'120px'}}>
+                    <span  className={`iconfont icon_${p}`}/>
+                  </div>
+                ))
+
+              }
             </div>
           </div>: null
         }

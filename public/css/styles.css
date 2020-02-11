@@ -89,3 +89,7 @@ header .nav-link {
     fill: currentColor;
     overflow: hidden;
 }
+
+body {
+    font-family: 'Noto Sans TC', sans-serif;
+}

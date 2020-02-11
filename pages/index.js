@@ -1,13 +1,14 @@
 import React, {Component, Fragment} from 'react'
 import withSizes from 'react-sizes'
 import axios from 'axios';
-import Router from "next/router";
 import DeskTopLayout from '../components/layouts/deskTopLayout'
 import StartPlayingDesktop from '../components/StartPlayingDesktop'
+import UserEvaluationSec from '../components/UserEvaluationSec'
+import AboutSec from '../components/AboutSec'
 import Slider from "react-slick";
 import SectionTitle from "../components/includes/SectionTitle";
 import css from "../styles/main.scss"
-import Tabs from "../components/Tabs";
+import Link from "next/link";
 
 class Index extends Component {
   static async getInitialProps({pathname, query, asPath, req, res}) {
@@ -37,12 +38,38 @@ class Index extends Component {
     // console.log(props);
 
     this.state = {
-      users: props.userData
+      users: props.userData,
+      bonus: [
+        {
+          "pic": "images/bonus/img-promotion-2.png",
+          "title": "賭神賽",
+          "context": "感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!",
+          "time": "2020.2.10.Mon"
+        },
+        {
+          "pic": "images/bonus/img-promotion-3.png",
+          "title": "賀聖誕派大獎 贏返水迎元旦",
+          "context": "感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!",
+          "time": "2020.2.10.Mon"
+        },
+        {
+          "pic": "images/bonus/img-promotion-4.png",
+          "title": "卡利系統一律返水1%",
+          "context": "感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!",
+          "time": "2020.2.10.Mon"
+        },
+        {
+          "pic": "images/bonus/img-promotion-5.png",
+          "title": "賀聖誕 派大獎",
+          "context": "感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!",
+          "time": "2020.2.10.Mon"
+        }
+      ]
     }
-    
+
 
   }
-  
+
   render() {
     const settings = {
       autoplay: true,
@@ -54,6 +81,13 @@ class Index extends Component {
       slidesToShow: 1,
       slidesToScroll: 1
     };
+    const settings_bonus = {
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3
+    };
+    const {bonus} = this.state;
+
     return (
       <Fragment>
         <DeskTopLayout>
@@ -68,8 +102,29 @@ class Index extends Component {
 
             <StartPlayingDesktop/>
 
+            <SectionTitle subject='優惠活動'/>
+
+            <Slider {...settings_bonus}>
+              {
+                bonus.map((b, i) => (
+                  <div key={i} className={css.bonus}>
+                    <img src={b.pic} alt="" className="img-responsive"/>
+                    <div className={css.title}>{b.title}</div>
+                    <p>{b.context}</p>
+                    <div className={css.bottom}>
+                      <p className={css.time}>{b.time}</p>
+                      <Link href='/'>
+                        <a style={{'whiteSpace': 'nowrap'}}>更多</a>
+                      </Link>
+                    </div>
+                  </div>
+                ))
+              }
+            </Slider>
 
           </div>
+          <UserEvaluationSec />
+          <AboutSec />
         </DeskTopLayout>
       </Fragment>
 

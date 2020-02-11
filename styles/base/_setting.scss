@@ -7,6 +7,7 @@ $large: max-width 1024px;
 $color-brown: #453535;
 $color-white: #ffffff;
 $tab01: #FF52F3;
+$btn-purple: #6236FF;
 $lightBrown: #ABA4A4;
 $color-mainYellow: #FC0;
 $color-mainLightBlue: #45DDF1;
@@ -95,10 +96,9 @@ $ls-content: 0.04em;
 
 html,body {
   -webkit-text-size-adjust: none;
-  font-family: Arial, Helvetica, sans-serif, Microsoft JhengHei;
+  font-family: Arial, Helvetica, "Noto Sans TC", sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: Arial, Helvetica, "source-han-sans-traditional", "Microsoft JhengHsans", "Microsoft YaHei", "Noto Sans TC",
-  sans-serif;
+  font-family: Arial, Helvetica, "Noto Sans TC", sans-serif;
 }

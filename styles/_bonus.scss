@@ -1,0 +1,41 @@
+.bonus {
+  max-width: 355px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 25px;
+  margin: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  img {
+    margin: 0 auto;
+  }
+  .title {
+    padding: 10px 0 10px;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  p {
+    color: #fff;
+    width: 100%;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 22px;
+    max-height: 80px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  .bottom {
+    display: flex;
+    justify-content: space-between;
+    .time {
+      color: #fff;
+      font-size: .8rem;
+      margin-bottom: 0;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
