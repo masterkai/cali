@@ -13,6 +13,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@auth0/auth0-spa-js": "^1.6.4",
+    "@material-ui/core": "^4.9.2",
+    "@material-ui/icons": "^4.9.1",
     "@zeit/next-sass": "^1.0.1",
     "axios": "^0.19.2",
     "breakpoint-sass": "^2.7.1",
@@ -21,6 +24,8 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-marquee-order": "^0.2.2",
+    "react-measure": "^2.3.0",
+    "react-router-dom": "^5.1.2",
     "react-simple-dropdown": "^3.2.3",
     "react-sizes": "^2.0.0",
     "react-slick": "^0.25.2",

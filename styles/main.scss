@@ -1,103 +1,37 @@
-@import "breakpoint-sass";
-@import "base/setting";
-@import "base/sectionTitle";
-@import "accordions";
-@import "bonus";
-@import "userTest";
+@import 'breakpoint-sass';
+@import 'base/setting';
+@import 'base/display';
+@import 'base/slideMenu';
+@import 'base/slideMenuMobile';
+@import 'base/sectionTitle';
+@import 'accordions';
+@import 'bonus';
+@import 'header';
+@import 'header_mobile';
+@import 'BottomNav';
+@import 'stratingPlayMobile';
+@import 'userTest';
+@import 'UserHeaderSec';
+@import 'menu';
+@import 'gameCard';
+@import 'gameNavigation';
 
-$mainText: #FFF3A7;
-$mainBK: #343434;
-$main: #332875;
-$main2: #75006c;
-$inputBG: #D7AE3E;
 .superAwesome {
-  @include breakpoint(max-width 768px) {
-    background-color: $main2;
-  }
-  background-color: $main;
   color: white;
   margin-bottom: unset;
-  padding: 5px;
   height: 45px;
-  background-image: linear-gradient(180deg, #FDF8A2 3%, #F4D97A 47%, #EEC462 100%);
-}
-
-.input {
-  &::placeholder {
-    color: white;
-    opacity: 1; /* Firefox */
-  }
-
-  &:focus {
-    color: #ffffff;
-    background-color: darken($inputBG, 15%);
-    //border-color: #ff7f19;
-    outline: 0;
-    outline-offset: -2px;
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
-  }
-
-  display: block;
-  height: calc(1.5em + .75rem);
-  padding: .375rem .75rem;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #000000;
-  background-color: $inputBG;
-  background-clip: padding-box;
-  border: unset;
-  border-radius: .25rem;
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  background-image: linear-gradient(
+    180deg,
+    #fdf8a2 3%,
+    #f4d97a 47%,
+    #eec462 100%
+  );
 }
 
 .flexContainer {
   display: flex;
   width: 100%;
-  justify-content: space-between;
-}
-
-.flex {
-  display: flex;
-}
-
-.menu {
-  &:before {
-    position: absolute;
-    top: -10px;
-    left: 30px;
-    content: '';
-    width: 0;
-    height: 0;
-    border-left: 8px solid transparent;
-    border-right: 8px solid transparent;
-    border-bottom: 10px solid #D8D8D8;
-    z-index: 10;
-  }
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-color: #D8D8D8;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
-  width: 164px;
-  height: 238px;
-  position: absolute;
-  padding: 25px;
-  border-radius: 3px;
-  z-index: 100;
-
-  a {
-    &:hover {
-      color: #75006c;
-    }
-
-    &:link {
-      text-decoration: none;
-    }
-
-    color: $mainBK;
-  }
+  justify-content: space-evenly;
 }
 
 .marquee {

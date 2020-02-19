@@ -1,0 +1,18 @@
+header {
+  .logo {
+    @include breakpoint(480px 1024px) {
+      margin: 0 auto;
+    }
+  }
+}
+.headerFlex {
+  @include breakpoint(480px 1024px) {
+    justify-content: center;
+  }
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}

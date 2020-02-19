@@ -6,6 +6,7 @@ ul {
     width: 100%;
     flex-wrap: wrap;
     flex-direction: column;
+    padding-bottom: 0;
   }
 
   .tabs {
@@ -15,10 +16,15 @@ ul {
     }
     display: flex;
     flex-direction: row;
-    &:nth-child(1){
-      .iconTab{
+    &:nth-child(1) {
+      .iconTab {
         &.active {
-          background-image: linear-gradient(180deg, #ff52f3 15%, #FFAB6C 66%, #FFDFC7 100%);
+          background-image: linear-gradient(
+            180deg,
+            #ff52f3 15%,
+            #ffab6c 66%,
+            #ffdfc7 100%
+          );
           p {
             color: black;
           }
@@ -26,16 +32,22 @@ ul {
       }
       .iconBtn {
         &:hover {
-          background-color: #FF52F3;
+          background-color: #ff52f3;
           background-image: unset;
         }
-        background-image: linear-gradient(1deg, rgba(255, 82, 243, 0.98) 0%, rgba(13, 0, 61, 0.33) 19%, rgba(31, 5, 121, 0.19) 45%, rgba(28, 0, 50, 0.12) 94%);
+        background-image: linear-gradient(
+          1deg,
+          rgba(255, 82, 243, 0.98) 0%,
+          rgba(13, 0, 61, 0.33) 19%,
+          rgba(31, 5, 121, 0.19) 45%,
+          rgba(28, 0, 50, 0.12) 94%
+        );
       }
     }
-    &:nth-child(2){
-      .iconTab{
+    &:nth-child(2) {
+      .iconTab {
         &.active {
-          background-image: linear-gradient(180deg, #2BFFEE 3%, #B0FFD3 100%);
+          background-image: linear-gradient(180deg, #2bffee 3%, #b0ffd3 100%);
           p {
             color: black;
           }
@@ -43,16 +55,22 @@ ul {
       }
       .iconBtn {
         &:hover {
-          background-color: #4EF0FF;
+          background-color: #4ef0ff;
           background-image: unset;
         }
-        background-image: linear-gradient(1deg, rgba(78, 240, 255, 0.98) 0%, rgba(13,0,61,0.33) 19%, rgba(31,5,121,0.19) 45%, rgba(28,0,50,0.12) 94%);
+        background-image: linear-gradient(
+          1deg,
+          rgba(78, 240, 255, 0.98) 0%,
+          rgba(13, 0, 61, 0.33) 19%,
+          rgba(31, 5, 121, 0.19) 45%,
+          rgba(28, 0, 50, 0.12) 94%
+        );
       }
     }
-    &:nth-child(3){
-      .iconTab{
+    &:nth-child(3) {
+      .iconTab {
         &.active {
-          background-image: linear-gradient(180deg, #FF1E74 3%, #FB50FF 100%);
+          background-image: linear-gradient(180deg, #ff1e74 3%, #fb50ff 100%);
           p {
             color: black;
           }
@@ -60,16 +78,22 @@ ul {
       }
       .iconBtn {
         &:hover {
-          background-color: #FF1E74;
+          background-color: #ff1e74;
           background-image: unset;
         }
-        background-image: linear-gradient(1deg, rgba(255,69,124,0.98) 0%, rgba(13,0,61,0.33) 24%, rgba(31,5,121,0.19) 45%, rgba(28,0,50,0.12) 94%);
+        background-image: linear-gradient(
+          1deg,
+          rgba(255, 69, 124, 0.98) 0%,
+          rgba(13, 0, 61, 0.33) 24%,
+          rgba(31, 5, 121, 0.19) 45%,
+          rgba(28, 0, 50, 0.12) 94%
+        );
       }
     }
-    &:nth-child(4){
-      .iconTab{
+    &:nth-child(4) {
+      .iconTab {
         &.active {
-          background-image: linear-gradient(180deg, #FFB60C 3%, #FFF100 100%);
+          background-image: linear-gradient(180deg, #ffb60c 3%, #fff100 100%);
           p {
             color: black;
           }
@@ -77,16 +101,22 @@ ul {
       }
       .iconBtn {
         &:hover {
-          background-color: #FFC40E;
+          background-color: #ffc40e;
           background-image: unset;
         }
-        background-image: linear-gradient(1deg, rgba(255,196,14,0.98) 0%, rgba(13,0,61,0.33) 16%, rgba(31,5,121,0.19) 45%, rgba(28,0,50,0.12) 94%);
+        background-image: linear-gradient(
+          1deg,
+          rgba(255, 196, 14, 0.98) 0%,
+          rgba(13, 0, 61, 0.33) 16%,
+          rgba(31, 5, 121, 0.19) 45%,
+          rgba(28, 0, 50, 0.12) 94%
+        );
       }
     }
-    &:nth-child(5){
-      .iconTab{
+    &:nth-child(5) {
+      .iconTab {
         &.active {
-          background-image: linear-gradient(180deg, #00ADFF 3%, #5CF7FF 100%);
+          background-image: linear-gradient(180deg, #00adff 3%, #5cf7ff 100%);
           p {
             color: black;
           }
@@ -94,19 +124,24 @@ ul {
       }
       .iconBtn {
         &:hover {
-          background-color: #45BBFF;
+          background-color: #45bbff;
           background-image: unset;
         }
-        background-image: linear-gradient(1deg, rgba(69,187,255,0.98) 0%, rgba(13,0,61,0.33) 19%, rgba(31,5,121,0.19) 45%, rgba(28,0,50,0.12) 94%);
+        background-image: linear-gradient(
+          1deg,
+          rgba(69, 187, 255, 0.98) 0%,
+          rgba(13, 0, 61, 0.33) 19%,
+          rgba(31, 5, 121, 0.19) 45%,
+          rgba(28, 0, 50, 0.12) 94%
+        );
       }
     }
     .iconTab {
-
       @include breakpoint($large) {
         max-width: 100%;
         justify-content: center;
         flex-direction: row;
-        background-image: linear-gradient(0deg, #2F00D5 0%, #000000 100%);
+        background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
         flex: 0 0 auto;
       }
       border: 1px solid #f2f42d;
@@ -116,26 +151,26 @@ ul {
       justify-content: flex-start;
       align-items: center;
       p {
-        @include breakpoint($large){
+        @include breakpoint($large) {
           writing-mode: unset;
           margin-bottom: 0;
         }
         font-size: 24px;
-        color: #FFF3A7;
+        color: #fff3a7;
         writing-mode: vertical-lr;
       }
       span {
-        @include breakpoint($large){
+        @include breakpoint($large) {
           font-size: 2rem;
         }
-        color: #FFF3A7;
-        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+        color: #fff3a7;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         max-width: 64px;
         font-size: 4rem;
       }
       cursor: pointer;
       flex: 0 0 60px;
-      background-image: linear-gradient(0deg, #2F00D5 0%, #000000 100%);
+      background-image: linear-gradient(0deg, #2f00d5 0%, #000000 100%);
     }
 
     .contentBox {
@@ -153,15 +188,17 @@ ul {
       align-items: center;
 
       .contentIMG {
-        @include breakpoint($large){
-          flex: 1 1 100%;
+        @include breakpoint($large) {
+          flex: 1 1 auto;
+          max-width: 100%;
         }
         flex: 1 1 68%;
-        //max-height: 250px;
-        //max-width: 500px;
       }
 
       .iconBox {
+        @include breakpoint($large) {
+          flex-wrap: nowrap;
+        }
         flex: 1 1 32%;
         display: flex;
         align-items: center;
@@ -179,7 +216,12 @@ ul {
             }
             color: #a68322;
             font-size: 6rem;
-            background: linear-gradient(180deg, #FDF8A2 3%, #F4D97A 47%, #EEC462 100%);
+            background: linear-gradient(
+              180deg,
+              #fdf8a2 3%,
+              #f4d97a 47%,
+              #eec462 100%
+            );
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
           }
@@ -194,9 +236,7 @@ ul {
           margin: 3px;
           border: 1px solid $darkGray;
           border-radius: 8px;
-
         }
-
       }
     }
   }

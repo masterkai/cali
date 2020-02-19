@@ -6,11 +6,19 @@
   flex-direction: column;
 
   .top {
+    @include breakpoint($large) {
+      flex-direction: column;
+    }
     display: flex;
     justify-content: space-between;
 
     img {
+      @include breakpoint($large) {
+        flex: 1 1 100%;
+        width: 100%;
+      }
       flex: 0 1 auto;
+      width: 272px;
       height: auto;
     }
 
@@ -37,7 +45,12 @@
         }
 
         span {
-          background: linear-gradient(180deg, #FDF8A2 3%, #F4D97A 47%, #EEC462 100%);
+          background: linear-gradient(
+            180deg,
+            #fdf8a2 3%,
+            #f4d97a 47%,
+            #eec462 100%
+          );
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           font-size: 20px;
@@ -48,11 +61,17 @@
   }
 
   .paragraph {
+    @include breakpoint($ipad) {
+      margin-top: 0;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
     margin-top: 30px;
     font-size: 18px;
-    color: #FFFFFF;
+    color: #ffffff;
     letter-spacing: 0;
     line-height: 38px;
+    font-weight: 300;
   }
 
   &_title {
@@ -60,9 +79,10 @@
     font-size: 2.125rem;
     color: #fff;
   }
-
 }
-
+.userFeedBackBox {
+  overflow-y: scroll;
+}
 .userBox {
   padding: 18px 50px;
   display: flex;
@@ -83,7 +103,7 @@
   .starBox {
     margin: 10px;
     span {
-      color: #F70000 ;
+      color: #f70000;
       font-size: 20px;
       margin: 0 2px;
     }
