@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import DeskTopLayout from '../../components/layouts/deskTopLayout';
-import MobileLayout from '../../components/layouts/MobileLayout';
+import MobileLayoutLevel2 from '../../components/layouts/MobileLayoutLevel2';
 import Footer from '../../components/Footer';
 import GameNavigation from '../../components/GameNavigation';
 import OutlineBtn from '../../components/OutlineBtn';
@@ -21,7 +21,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
               }}
             >
               <span className="iconfont icon_allbet" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div className={css.gameCardGroup}>
               <div
@@ -33,7 +33,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
                 }}
               >
                 <span className="iconfont icon_Cali_logo" />
-                <OutlineBtn />
+                <OutlineBtn name="開始" />
               </div>
               <div
                 className={css.gameCard}
@@ -44,7 +44,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
                 }}
               >
                 <span className="iconfont icon_SAgaming" />
-                <OutlineBtn />
+                <OutlineBtn name="開始" />
               </div>
               <div
                 className={css.gameCard}
@@ -57,7 +57,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
                   className="iconfont icon_DreamGaming"
                   style={{ fontSize: '7rem' }}
                 />
-                <OutlineBtn />
+                <OutlineBtn name="開始" />
               </div>
               <div
                 className={css.gameCard}
@@ -67,7 +67,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
                 }}
               >
                 <span className="iconfont icon_WM" />
-                <OutlineBtn />
+                <OutlineBtn name="開始" />
               </div>
             </div>
           </div>
@@ -76,8 +76,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
         <Footer />
       </DeskTopLayout>
       {isMobile && (
-        <MobileLayout>
-          <div className={css.mobileEmpty} />
+        <MobileLayoutLevel2 title="真人娛樂" path={true}>
           <div className={css.gameCardGroup__mobile}>
             <div
               className={css.gameCard}
@@ -87,7 +86,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
               }}
             >
               <span className="iconfont icon_allbet" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" path="/" />
             </div>
             <div
               className={css.gameCard}
@@ -97,7 +96,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
               }}
             >
               <span className="iconfont icon_Cali_logo" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={css.gameCard}
@@ -107,7 +106,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
               }}
             >
               <span className="iconfont icon_SAgaming" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={css.gameCard}
@@ -120,7 +119,7 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
                 className="iconfont icon_DreamGaming"
                 style={{ fontSize: '7rem' }}
               />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={css.gameCard}
@@ -130,10 +129,10 @@ const Baccarat = ({ isMobile, isTablet, isDesktop }) => {
               }}
             >
               <span className="iconfont icon_WM" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
           </div>
-        </MobileLayout>
+        </MobileLayoutLevel2>
       )}
     </Fragment>
   );

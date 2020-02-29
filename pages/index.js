@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useState } from 'react';
 import withSizes from 'react-sizes';
 import DeskTopLayout from '../components/layouts/deskTopLayout';
 import MobileLayout from '../components/layouts/MobileLayout';
@@ -12,37 +12,8 @@ import SectionTitle from '../components/includes/SectionTitle';
 import css from '../styles/main.scss';
 import Marquee from 'react-smooth-marquee';
 import MobileIndex from '../components/mobileIndex';
+import bonus from '../data/bonus';
 
-const bonus = [
-  {
-    pic: 'images/bonus/img-promotion-2.png',
-    title: '賭神賽',
-    context:
-      '感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!',
-    time: '2020.2.10.Mon'
-  },
-  {
-    pic: 'images/bonus/img-promotion-3.png',
-    title: '賀聖誕派大獎 贏返水迎元旦',
-    context:
-      '感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!',
-    time: '2020.2.10.Mon'
-  },
-  {
-    pic: 'images/bonus/img-promotion-4.png',
-    title: '卡利系統一律返水1%',
-    context:
-      '感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!',
-    time: '2020.2.10.Mon'
-  },
-  {
-    pic: 'images/bonus/img-promotion-5.png',
-    title: '賀聖誕 派大獎',
-    context:
-      '感謝廣大會員持續遊玩任你博網站，為回饋熱情支持，推出一個月一次的會員活動會員日的每筆存款都可申請儲值回饋金，使用指定收款帳戶入款，回饋金更高達15%呢！還不快點通知親朋好友一起共襄盛舉!!!',
-    time: '2020.2.10.Mon'
-  }
-];
 const settings = {
   autoplay: true,
   dots: true,
@@ -91,7 +62,7 @@ const Index = ({ isMobile, isTablet, isDesktop }) => {
       <DeskTopLayout>
         <Slider {...settings}>
           <img
-            src="images/banner/banner01.jpeg"
+            src="images/banner/banner01.jpg"
             alt=""
             className="img-responsive"
           />
@@ -136,10 +107,9 @@ const Index = ({ isMobile, isTablet, isDesktop }) => {
       </DeskTopLayout>
       {isMobile && (
         <MobileLayout>
-          <div className={css.mobileEmpty} />
           <Slider {...settings_mobile}>
             <img
-              src="images/banner/banner01.jpeg"
+              src="images/banner/banner01.jpg"
               alt=""
               className="img-responsive"
             />

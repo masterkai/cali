@@ -1,10 +1,17 @@
 @import 'breakpoint-sass';
 @import 'base/setting';
+@import 'base/userStateBar';
 @import 'base/display';
 @import 'base/slideMenu';
 @import 'base/slideMenuMobile';
 @import 'base/sectionTitle';
+@import 'base/banner';
+@import 'base/tabs';
+@import 'base/modal';
+@import 'base/outlineBtn';
+@import 'base/item';
 @import 'accordions';
+@import 'itemBox';
 @import 'bonus';
 @import 'header';
 @import 'header_mobile';
@@ -12,9 +19,15 @@
 @import 'stratingPlayMobile';
 @import 'userTest';
 @import 'UserHeaderSec';
+@import 'mobileBodyBox';
 @import 'menu';
+@import 'UpMenu';
+@import 'UpSwitch';
+@import 'DDWallet';
 @import 'gameCard';
 @import 'gameNavigation';
+@import 'depositAndWithdraw';
+@import 'transferWallet';
 
 .superAwesome {
   color: white;

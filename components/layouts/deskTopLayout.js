@@ -11,6 +11,11 @@ const DeskTopLayout = props => (
   <Fragment>
     <div className={css.displayDesktop}>
       <Head>
+        {/* <meta
+          name="viewport"
+          content="width=1280, initial-scale=0.5, maximum-scale=3.0, user-scalable=1"
+        /> */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="shortcut icon" href="images/favicon-32x32.png" />
         <link
           href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional"
@@ -63,7 +68,7 @@ const DeskTopLayout = props => (
         {`
           .mainBG::after {
             content: '';
-            background: url(images/stary_sky.png) repeat;
+            background: url(/images/stary_sky.png) repeat;
             background-size: 30%;
             filter: contrast(100%);
             opacity: 0.32;

@@ -5,7 +5,7 @@ import css from '../../styles/main.scss';
 import OutlineBtn from '../../components/OutlineBtn';
 import GameNavigation from '../../components/GameNavigation';
 import Footer from '../../components/Footer';
-import MobileLayout from '../../components/layouts/MobileLayout';
+import MobileLayoutLevel2 from '../../components/layouts/MobileLayoutLevel2';
 
 const Electronics = ({ isMobile, under768 }) => {
   return (
@@ -28,7 +28,7 @@ const Electronics = ({ isMobile, under768 }) => {
               }
             >
               <span className="iconfont icon_realtime-gaming" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={`${css.gameCardVertical__electronics}`}
@@ -45,7 +45,7 @@ const Electronics = ({ isMobile, under768 }) => {
               }
             >
               <span className="iconfont iconicon_SAGAMING_horizontal" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={`${css.gameCardVertical__electronics}`}
@@ -62,7 +62,7 @@ const Electronics = ({ isMobile, under768 }) => {
               }
             >
               <span className="iconfont icon_betixion" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={`${css.gameCardVertical__electronics}`}
@@ -79,7 +79,7 @@ const Electronics = ({ isMobile, under768 }) => {
               }
             >
               <span className="iconfont icon_betsoft" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
           </div>
           <GameNavigation />
@@ -87,8 +87,7 @@ const Electronics = ({ isMobile, under768 }) => {
         <Footer />
       </DeskTopLayout>
       {isMobile && (
-        <MobileLayout>
-          <div className={css.mobileEmpty} />
+        <MobileLayoutLevel2 title="電子遊戲" path={true}>
           <div
             className={css.gameCardGroup__mobile}
             style={{ height: '750px' }}
@@ -103,7 +102,7 @@ const Electronics = ({ isMobile, under768 }) => {
               }}
             >
               <span className="iconfont icon_realtime-gaming" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={css.gameCard}
@@ -115,7 +114,7 @@ const Electronics = ({ isMobile, under768 }) => {
               }}
             >
               <span className="iconfont iconicon_SAGAMING_horizontal" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={css.gameCard}
@@ -127,7 +126,7 @@ const Electronics = ({ isMobile, under768 }) => {
               }}
             >
               <span className="iconfont icon_betixion" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={css.gameCard}
@@ -139,10 +138,10 @@ const Electronics = ({ isMobile, under768 }) => {
               }}
             >
               <span className="iconfont icon_betsoft" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
           </div>
-        </MobileLayout>
+        </MobileLayoutLevel2>
       )}
     </Fragment>
   );

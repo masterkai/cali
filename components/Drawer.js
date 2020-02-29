@@ -26,11 +26,11 @@ class Drawer extends Component {
       <div className={_class[this.state.show]} onClick={this.show}>
         <div className="infoBox">
           <p>在線客服</p>
-          <img src="images/qrCode.png" alt="" className="img-responsive" />
+          <img src="/images/qrCode.png" alt="" className="img-responsive" />
         </div>
         <div className="infoBox">
           <img
-            src="images/line-messenger.svg"
+            src="/images/line-messenger.svg"
             alt=""
             className="img-responsive"
           />

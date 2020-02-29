@@ -1,16 +1,30 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, useState } from 'react';
 import Link from 'next/link';
 import css from '../../styles/main.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
+import Modal from 'react-modal';
+import Router from 'next/router';
+import Measure from 'react-measure';
+import UserStateBar from '../includes/UserStateBar';
+
+const modalStyles = {
+  content: {
+    width: '320px',
+    display: 'flex',
+    flexDirection: 'column',
+    backgroundColor: '#d8d8d8',
+    padding: '0',
+    top: '35%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    transform: 'translate(-50%, -50%)',
+    border: 'none'
+  }
+};
+
+Modal.setAppElement('#__next');
 
 const useStyles = makeStyles({
   list: {
@@ -21,7 +35,28 @@ const useStyles = makeStyles({
   }
 });
 
-const MainNavMobile = () => {
+const MainNavMobile = ({ getHeight }) => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const [dimensions, setDimensions] = useState({
+    width: -1,
+    height: -1
+  });
+  const { width, height } = dimensions;
+
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const afterOpenModal = () => {
+    // references are now sync'd and can be accessed.
+    Modal.subtitle.style.color = '#fff';
+    Modal.defaultStyles.overlay.backgroundColor = 'rgba(0,0,0,.65)';
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   const classes = useStyles();
   const [state, setState] = React.useState({
     top: false,
@@ -55,7 +90,7 @@ const MainNavMobile = () => {
             className={`iconfont icon_times-light ${css.icon_times}`}
             style={{ color: 'white' }}
           />
-          <p>登入</p>
+          <p onClick={openModal}>登入</p>
         </div>
         <div className={css.menuItemsMobile}>
           <Link href="/">
@@ -97,7 +132,7 @@ const MainNavMobile = () => {
         </div>
 
         <div className={css.menuItemsMobile}>
-          <Link href="/online_baccarat">
+          <Link href="/promotions">
             <a className={css.listItem}>
               <span className="iconfont icon_gift-light" />
               <p>優惠活動</p>
@@ -127,7 +162,7 @@ const MainNavMobile = () => {
               <p>代理加盟</p>
             </a>
           </Link>
-          <Link href="/fish">
+          <Link href="/about">
             <a className={css.listItem}>
               <span className="iconfont icon_Cali_logo" />
               <p>關於卡利</p>
@@ -138,52 +173,106 @@ const MainNavMobile = () => {
     </div>
   );
 
+  const hamburger = {
+    marginLeft: '10px',
+    fontSize: '1.625rem'
+  };
+  const [isUser, setIsUser] = useState(true);
+
   return (
     <Fragment>
-      <header>
-        <nav className={`navbar fixed-top ${css.navBarFlex}`}>
-          <span
-            onClick={toggleDrawer('left', true)}
-            className="iconfont icon_bars-light"
-          />
-          <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
-            {sideList('left')}
-          </Drawer>
-          <Link href="/">
-            <a className={css.logo}>
-              <img
-                className="img-responsive logo_m"
-                src="images/Cali_logo_mobile.png"
-                alt=""
+      <Measure
+        bounds
+        onResize={contentRect => {
+          setDimensions(contentRect.bounds);
+        }}
+      >
+        {({ measureRef }) => (
+          <div
+            ref={measureRef}
+            className={`fixed-top`}
+            height={getHeight(height)}
+          >
+            <nav className={`navbar ${css.navBarFlex}`}>
+              <span
+                onClick={toggleDrawer('left', true)}
+                className="iconfont icon_bars-light"
+                style={hamburger}
               />
-            </a>
-          </Link>
-          <div className={css.btnGroup}>
-            <button type="button" className={css.btnOutLine}>
-              註冊
-            </button>
-            <button type="button" className={css.btnOutLine}>
-              登入
-            </button>
+              <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+                {sideList('left')}
+              </Drawer>
+              <Link href="/">
+                <a className={isUser ? css.logoisUser : css.logo}>
+                  <img
+                    className="img-responsive logo_m"
+                    src="/images/Cali_logo_mobile.png"
+                    alt=""
+                  />
+                </a>
+              </Link>
+              {isUser ? (
+                ''
+              ) : (
+                <div className={css.btnGroup}>
+                  <button
+                    onClick={() => Router.push('/register')}
+                    type="button"
+                    className={css.btnOutLine}
+                  >
+                    註冊
+                  </button>
+                  <button
+                    onClick={openModal}
+                    type="button"
+                    className={css.btnOutLine}
+                  >
+                    登入
+                  </button>
+                </div>
+              )}
+            </nav>
+            {isUser ? <UserStateBar /> : ''}
+            <Modal
+              isOpen={modalIsOpen}
+              onAfterOpen={afterOpenModal}
+              onRequestClose={closeModal}
+              style={modalStyles}
+              contentLabel="Example Modal"
+            >
+              <div className={css.modalHeader}>
+                <div ref={subtitle => (Modal.subtitle = subtitle)}>
+                  會員登入
+                </div>
+                <span
+                  className="iconfont icon_times-light"
+                  onClick={closeModal}
+                />
+              </div>
+
+              <div className={css.modalBody}>
+                <form className={css.formGroup}>
+                  <label className={`${css.userAccount}`}>
+                    <input type="text" placeholder="帳號/手機號碼" />
+                  </label>
+                  <label className={css.userPassword}>
+                    <input type="text" placeholder="密碼" />
+                  </label>
+                </form>
+              </div>
+
+              <div className={css.modalBtnGroup}>
+                <button type="button" className="btn btn-warning btn-sm">
+                  立即註冊
+                </button>
+                <button type="button" className="btn btn-primary btn-sm">
+                  登入
+                </button>
+              </div>
+            </Modal>
           </div>
-        </nav>
-        <style jsx>
-          {`
-            span.iconfont {
-              margin-left: 10px;
-              font-size: 1.625rem;
-              background: linear-gradient(
-                180deg,
-                #fdf8a2 3%,
-                #f4d97a 47%,
-                #eec462 100%
-              );
-              -webkit-background-clip: text;
-              -webkit-text-fill-color: transparent;
-            }
-          `}
-        </style>
-      </header>
+        )}
+      </Measure>
     </Fragment>
   );
 };

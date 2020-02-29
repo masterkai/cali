@@ -5,14 +5,6 @@ import css from '../../styles/main.scss';
 import withSizes from 'react-sizes';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-import Button from '@material-ui/core/Button';
-import List from '@material-ui/core/List';
-import Divider from '@material-ui/core/Divider';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import MailIcon from '@material-ui/icons/Mail';
 
 const useStyles = makeStyles({
   list: {
@@ -95,7 +87,7 @@ const MainNav = ({ isMobile, isTablet }) => {
         </div>
 
         <div className={css.menuItems}>
-          <Link href="/online_baccarat">
+          <Link href="/promotions">
             <a className={css.listItem}>
               <span className="iconfont icon_gift-light" />
               <p>優惠活動</p>
@@ -125,7 +117,7 @@ const MainNav = ({ isMobile, isTablet }) => {
               <p>代理加盟</p>
             </a>
           </Link>
-          <Link href="/fish">
+          <Link href="/about">
             <a className={css.listItem}>
               <span className="iconfont icon_Cali_logo" />
               <p>關於卡利</p>
@@ -156,7 +148,7 @@ const MainNav = ({ isMobile, isTablet }) => {
               <a className={`navbar-brand ${css.logo}`}>
                 <img
                   className="img-responsive logo"
-                  src="images/Cali_logo_02.png"
+                  src="/images/Cali_logo_02.png"
                   alt=""
                 />
               </a>
@@ -215,7 +207,7 @@ const MainNav = ({ isMobile, isTablet }) => {
                       優惠活動
                     </a>
                   </Link>
-                  <DropDownMenu />
+                  <DropDownMenu name="更多" />
                 </div>
               </div>
             )}

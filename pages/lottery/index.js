@@ -5,7 +5,7 @@ import css from '../../styles/main.scss';
 import OutlineBtn from '../../components/OutlineBtn';
 import GameNavigation from '../../components/GameNavigation';
 import Footer from '../../components/Footer';
-import MobileLayout from '../../components/layouts/MobileLayout';
+import MobileLayoutLevel2 from '../../components/layouts/MobileLayoutLevel2';
 
 const Lottery = ({ isMobile, under768 }) => {
   return (
@@ -28,7 +28,7 @@ const Lottery = ({ isMobile, under768 }) => {
               }
             >
               <span className="iconfont icon_SUPERbingo" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={`${css.gameCardVertical__bingo}`}
@@ -45,7 +45,7 @@ const Lottery = ({ isMobile, under768 }) => {
               }
             >
               <span className="iconfont icon_Klottery" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
           </div>
           <GameNavigation />
@@ -53,8 +53,7 @@ const Lottery = ({ isMobile, under768 }) => {
         <Footer />
       </DeskTopLayout>
       {isMobile && (
-        <MobileLayout>
-          <div className={css.mobileEmpty} />
+        <MobileLayoutLevel2 title="賓果彩票" path={true}>
           <div
             className={css.gameCardGroup__mobile}
             style={{ height: '650px' }}
@@ -68,10 +67,8 @@ const Lottery = ({ isMobile, under768 }) => {
                 backgroundPosition: 'center, left top, center'
               }}
             >
-              <span
-                className="iconfont icon_SUPERbingo"
-              />
-              <OutlineBtn />
+              <span className="iconfont icon_SUPERbingo" />
+              <OutlineBtn name="開始" />
             </div>
             <div
               className={css.gameCard}
@@ -83,10 +80,10 @@ const Lottery = ({ isMobile, under768 }) => {
               }}
             >
               <span className="iconfont icon_Klottery" />
-              <OutlineBtn />
+              <OutlineBtn name="開始" />
             </div>
           </div>
-        </MobileLayout>
+        </MobileLayoutLevel2>
       )}
     </Fragment>
   );

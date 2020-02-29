@@ -3,8 +3,8 @@ import Link from 'next/link';
 import css from '../styles/main.scss';
 
 class DropDownMenu extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       showMenu: false
@@ -36,7 +36,7 @@ class DropDownMenu extends Component {
           onClick={this.showMenu}
           style={{ padding: '.5rem 0' }}
         >
-          更多
+          {this.props.name}
         </div>
 
         {this.state.showMenu ? (
