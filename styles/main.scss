@@ -12,6 +12,7 @@
 @import 'base/item';
 @import 'accordions';
 @import 'itemBox';
+@import 'itemContainer';
 @import 'bonus';
 @import 'header';
 @import 'header_mobile';
@@ -26,8 +27,9 @@
 @import 'DDWallet';
 @import 'gameCard';
 @import 'gameNavigation';
-@import 'depositAndWithdraw';
+@import 'dropDownBox';
 @import 'transferWallet';
+@import 'noticeBox';
 
 .superAwesome {
   color: white;

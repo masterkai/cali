@@ -16,7 +16,7 @@ const DeskTopLayout = props => (
           content="width=1280, initial-scale=0.5, maximum-scale=3.0, user-scalable=1"
         /> */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="shortcut icon" href="images/favicon-32x32.png" />
+        <link rel="shortcut icon" href="/images/favicon-32x32.png" />
         <link
           href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300,400,500,700&display=swap&subset=chinese-traditional"
           rel="stylesheet"
