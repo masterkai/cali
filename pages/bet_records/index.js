@@ -130,7 +130,7 @@ const BetRecords = () => {
       <MobileLayoutLevel2 title="投注記錄" path={true}>
         <div
           className={css.mobileBox}
-          style={{height: '700px', paddingBottom: 80, overflowY: 'scroll'}}
+          style={{maxHeight: '700px', paddingBottom: 80, overflowY: 'scroll'}}
         >
           <Tabs defaultIndex={0} onSelect={index => console.log(index)}>
             <TabList>

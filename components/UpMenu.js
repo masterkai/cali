@@ -71,11 +71,11 @@ class UpMenu extends Component {
                   </p>
                 </a>
               </Link>
-              <Link href="/app_download">
+              <Link href="/bonus_records">
                 <a>
                   <p>
                     <span className="iconfont icon_gift-light" />
-                    活動點數
+                    優惠記錄
                   </p>
                 </a>
               </Link>

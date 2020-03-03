@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react';
+import React, {Fragment, useState} from 'react';
 import MobileLayoutLevel2 from '../../components/layouts/MobileLayoutLevel2';
 import OutlineBtn from '../../components/OutlineBtn';
 import css from '../../styles/main.scss';
@@ -17,10 +17,11 @@ const MoneyTransfer = prop => {
       <MobileLayoutLevel2 title="存款專區" back={true}>
         <div
           className={css.mobileBox_nobg}
-          style={{ height: 'auto', paddingBottom: 80 }}
+          style={{height: 'auto', paddingBottom: 80}}
         >
           <div className={css.itemContainer}>
             <div
+              onClick={showAccordian}
               style={{
                 display: 'flex',
                 justifyContent: 'space-between',
@@ -28,7 +29,7 @@ const MoneyTransfer = prop => {
                 width: '100%'
               }}
             >
-              <div style={{ display: 'flex', alignItems: 'center' }}>
+              <div style={{display: 'flex', alignItems: 'center'}}>
                 <span
                   className="iconfont icon_ATM"
                   style={{
@@ -37,13 +38,12 @@ const MoneyTransfer = prop => {
                     marginRight: 10
                   }}
                 />
-                <div style={{ fontSize: '1rem', color: 'black' }}>銀行轉帳</div>
+                <div style={{fontSize: '1rem', color: 'black'}}>銀行轉帳</div>
               </div>
 
               <span
-                onClick={showAccordian}
                 className={_class[accordian]}
-                style={{ fontSize: '1rem', color: '#9BA2AA' }}
+                style={{fontSize: '1rem', color: '#9BA2AA'}}
               />
             </div>
             {accordian && (
@@ -59,14 +59,14 @@ const MoneyTransfer = prop => {
             <div className={css.itemPlateTitle}>請先存款到下列帳戶</div>
             <div className={css.listItem}>
               <div>銀行：</div>
-              <div style={{ textAlign: 'center' }}>合庫銀行-府城分行</div>
-              <div style={{ width: 60 }} />
+              <div style={{textAlign: 'center'}}>合庫銀行-府城分行</div>
+              <div style={{width: 60}}/>
             </div>
             <div className={css.listItem}>
               <div>帳號：</div>
-              <div style={{ textAlign: 'center' }}>
+              <div style={{textAlign: 'center'}}>
                 (銀行代號：006)
-                <br />
+                <br/>
                 5229-8722-17822
               </div>
               <button type="button" className="btn btn-outline-dark">
@@ -77,7 +77,7 @@ const MoneyTransfer = prop => {
 
           <div className={`${css.itemContainer} ${css.itemContainer__simple}`}>
             <img
-              style={{ padding: 10, width: 150 }}
+              style={{padding: 10, width: 150}}
               src="/images/banks/bank01.png"
               alt=""
               className="img-responsive"
@@ -85,20 +85,20 @@ const MoneyTransfer = prop => {
             <div>尾號：6041</div>
           </div>
           <form>
-            <div className="form-group" style={{ marginBottom: 30 }}>
-              <label style={{ color: 'white' }}>存款金額</label>
+            <div className="form-group" style={{marginBottom: 30}}>
+              <label style={{color: 'white'}}>存款金額</label>
               <input
                 type="text"
                 className="form-control"
                 placeholder="100-500000"
               />
             </div>
-            <OutlineBtn name="確認送出" />
+            <OutlineBtn name="確認送出"/>
           </form>
 
           <div className={css.noticeBox}>
             <div className={css.noticeTitle}>注意事項</div>
-            <ol style={{ paddingLeft: 20 }}>
+            <ol style={{paddingLeft: 20}}>
               <li>
                 請務必依照指定的銀行帳號進行存款，若轉至舊有的銀行帳號將無法查收，恕不負責。
               </li>
