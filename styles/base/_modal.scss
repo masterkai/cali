@@ -26,12 +26,67 @@
   }
 }
 .modalBody {
+  .line {
+    height: 1px;
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgba(255,255,255,.35);
+  }
+  &__BetRecordsLayout {
+    padding: 20px;
+  }
+  &__InfoLayout {
+    display: flex;
+
+    form {
+      .title {
+        text-align: center;
+        margin-bottom: 20px;
+        color: $lightYellow;
+      }
+      flex: 1 1 50%;
+      label {
+        .red {
+          color: $mainRed;
+        }
+        .blue {
+          color: $color-mainLightBlue;
+        }
+        color: white;
+        font-weight: 300;
+      }
+      .input_box {
+        //width: 270px;
+        height: 38px;
+        float: right;
+        padding: 0 8px;
+        box-sizing: border-box;
+        color: #000;
+        border: 1px solid #e5e5e5;
+      }
+      .btn_ver_code {
+        &__message {
+          background-color: $color-mainLightBlue;
+          color: $color-white;
+        }
+        width: 55px;
+        height: 27px;
+        background-color: #aaa;
+        text-align: center;
+        line-height: 27px;
+        border-radius: 2px;
+        position: absolute;
+        top: 5px;
+        right: 22px;
+        cursor: default;
+      }
+    }
+  }
   p {
     margin: 20px auto;
     color: $color-mainLightBlue;
     text-align: center;
   }
-  padding: 15px 10px 10px;
   .formGroup {
     .userAccount,
     .userPassword {
@@ -82,4 +137,5 @@
       transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     }
   }
+  padding: 15px 10px 10px;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import css from '../styles/main.scss';
 
-const Item = ({ from, time, data, result }) => {
+const Item = ({ checkBox, from, time, data, result }) => {
   const _class = {
     true: 'iconfont icon_chevron-up-light',
     false: 'iconfont icon_chevron-down-light'
@@ -30,6 +30,7 @@ const Item = ({ from, time, data, result }) => {
             alignItems: 'center'
           }}
         >
+          {checkBox&&<input type='checkbox' style={{marginRight:10}}/>}
           <div style={{ fontSize: '1rem', color: '#231F20' }}>{from}</div>
         </div>
         <div style={{ fontSize: '1rem', color: '#6D7278' }}>{time}</div>

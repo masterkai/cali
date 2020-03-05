@@ -1,0 +1,8 @@
+.buttonGroup {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  button {
+    flex: 0 1 24%;
+  }
+}

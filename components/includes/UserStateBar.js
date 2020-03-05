@@ -1,6 +1,7 @@
 import React from 'react';
 import DDWallet from '../DDWallet';
 import css from '../../styles/main.scss';
+import Router from "next/router";
 const UserStateBar = props => {
   return (
     <div className={css.userStateBar}>
@@ -14,7 +15,9 @@ const UserStateBar = props => {
           <span className="iconfont icon_star-light" />
           <span className="iconfont icon_star-light" />
         </div>
-        <span className="iconfont icon_bell-light" />
+        <span
+          onClick={()=> Router.push('/notice')}
+          className="iconfont icon_bell-light" />
       </div>
       <div className={css.userStateColumn}>
         <span className="iconfont icon_usd-circle-light" />

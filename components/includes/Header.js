@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react';
 import DeskTopLayout from '../layouts/deskTopLayout';
 import css from '../../styles/main.scss';
 import Router from 'next/router';
+import Register from "../Register";
 
 class Header extends Component {
   state = {
@@ -17,17 +18,7 @@ class Header extends Component {
       <Fragment>
         <div className={css.headerBG}>
           <form onSubmit={this.handleSubmit} className={css.flexContainer}>
-            <button
-              style={{ marginRight: '5px' }}
-              type="button"
-              className="btn btn-dark btn-sm"
-            >
-              立即註冊&nbsp;
-              <span
-                className="iconfont icon_user-plus-light"
-                style={{ color: 'white' }}
-              />
-            </button>
+            <Register/>
             <div className={css.flex}>
               <input
                 style={{ marginRight: '5px' }}

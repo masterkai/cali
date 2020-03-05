@@ -30,6 +30,8 @@
 @import 'dropDownBox';
 @import 'transferWallet';
 @import 'noticeBox';
+@import 'buttonGroup';
+@import 'wallet';
 
 .superAwesome {
   color: white;
@@ -44,6 +46,11 @@
 }
 
 .flexContainer {
+  &__status {
+    span {
+      font-size: 1.6rem;
+    }
+  }
   display: flex;
   width: 100%;
   justify-content: space-evenly;

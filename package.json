@@ -37,6 +37,7 @@
     "react-slick": "^0.25.2",
     "react-smooth-marquee": "^1.0.0",
     "react-swipeable-views": "^0.13.9",
-    "react-tabs": "^3.1.0"
+    "react-tabs": "^3.1.0",
+    "react-tooltip": "^4.1.0"
   }
 }
