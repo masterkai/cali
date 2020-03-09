@@ -9,7 +9,7 @@ import ScrollButton from '../ScrollButton';
 import Drawer from '../Drawer';
 
 const DeskTopLayout = props => {
-    const [user, setUser] = useState(false);
+    const [user, setUser] = useState(true);
     return (
       <Fragment>
         <div className={css.displayDesktop}>
@@ -47,7 +47,7 @@ const DeskTopLayout = props => {
             <link rel="stylesheet" href="/css/iconfont.css"/>
             <title>卡利娛樂城</title>
           </Head>
-          {user?<StatefulHeader/>:<Header/>}
+          {user?<StatefulHeader setUser={setUser}/>:<Header setUser={setUser}/>}
 
 
           <MainNav/>

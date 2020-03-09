@@ -9,9 +9,15 @@ class Header extends Component {
     email: '',
     password: ''
   };
+
+  handleLogin = () => {
+    this.props.setUser(true)
+  }
+
   handleSubmit = event => {
     event.preventDefault();
     console.log(this.state);
+
   };
   render() {
     return (
@@ -34,7 +40,7 @@ class Header extends Component {
               />
             </div>
             <button
-              onSubmit={this.handleSubmit}
+              onClick={this.handleLogin}
               style={{ marginRight: '5px' }}
               type="button"
               className="btn btn-outline-dark btn-sm"

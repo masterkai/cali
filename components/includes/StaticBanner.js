@@ -7,8 +7,10 @@ const StaticBanner = ({ title, desc, bannerIMG }) => {
       className={css.banner}
       style={{ backgroundImage: `url(${bannerIMG})` }}
     >
-      <div className={css.title}>{title}</div>
-      <div className={css.desc}>{desc}</div>
+      <div className={css.bannerContent}>
+        <div className={css.title}>{title}</div>
+        <div className={css.desc}>{desc}</div>
+      </div>
     </div>
   );
 };

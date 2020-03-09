@@ -93,13 +93,13 @@ const MainNav = ({ isMobile, isTablet }) => {
               <p>優惠活動</p>
             </a>
           </Link>
-          <Link href="/sports">
+          <Link href="/user_evaluation">
             <a className={css.listItem}>
               <span className="iconfont icon_star-solid" />
               <p>玩家評價</p>
             </a>
           </Link>
-          <Link href="/lottery">
+          <Link href="/access_process">
             <a className={css.listItem}>
               <span className="iconfont icon_wallet-light" />
               <p>存取流程</p>

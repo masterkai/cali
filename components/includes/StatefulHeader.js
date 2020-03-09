@@ -10,8 +10,10 @@ import MemberNotification from "../MemberNotification";
 
 
 
-const StatefulHeader = (props) => {
-
+const StatefulHeader = ({setUser}) => {
+  const logOut = ()=> {
+    setUser(false)
+  }
 
   return (
     <Fragment>
@@ -39,6 +41,7 @@ const StatefulHeader = (props) => {
 
 
           <span
+            onClick={logOut}
             className="iconfont icon_sign-out-light"
             style={{marginLeft: 20}}
             data-tip="會員登出"

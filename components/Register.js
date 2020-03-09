@@ -24,7 +24,7 @@ const modalStyles = {
 Modal.setAppElement('#__next');
 
 function InfoModify(props) {
-  const [modalIsOpen, setModalIsOpen] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const [passModalIsOpen, setPassModalIsOpen] = useState(false);
   const openModal = () => {
     setModalIsOpen(true);
